@@ -121,20 +121,25 @@
                 
                           <h3 class="h3 form-title">Deixe sua messagem</h3>
                 
-                          <form action="#" class="form" data-form>
+                          <form onsubmit="event.preventDefault()">
                 
-                            <div class="input-wrapper">
-                              <input type="text" name="fullname" class="form-input" placeholder="Nome" required data-form-input>
-                
-                              <input type="email" name="email" class="form-input" placeholder="E-mail" required data-form-input>
-                            </div>
-                
-                            <textarea name="message" class="form-input" placeholder="Messagem" required data-form-input></textarea>
-                
-                            <button class="form-btn" type="submit" disabled data-form-btn>
-                              <ion-icon name="paper-plane"></ion-icon>
-                              <span>Enviar</span>
-                            </button>
+                                <div class="input-wrapper">
+                                    
+                                    <input type="text" name="input-nome" id="input-nome" class="form-input" placeholder="Nome" required data-form-input>
+                                    
+                                    
+                                    <input type="email" name="input-email" id="input-email" class="form-input" placeholder="E-mail" required data-form-input>
+                                    
+                                    
+                                    <input type="tel" name="input-tel" id="input-tel" class="form-input" placeholder="(99) 99999-9999" required pattern="^\(\d{2}\) \d{5}-\d{4}$" maxlength="15">
+                                </div>
+                                
+                                
+                                <textarea name="message" name="input-msg" id="input-msg" class="form-input" placeholder="Messagem" required data-form-input></textarea>
+                    
+
+                                <input type="submit" value="Enviar" class="form-input" onclick="enviarFormulario()">
+
                 
                           </form>
                 
@@ -151,6 +156,7 @@
         
 
     </main>
+    <script src="./script/script.js"></script>
     
 </body>
 </html>
